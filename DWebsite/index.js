@@ -22,3 +22,8 @@ app.get('/secret', function(req, res) {
 app.get('/Baalismommy', function(req, res){
     res.sendfile(path.join(__dirname + `/first_view.html`));
 });
+
+app.get('/bunger', function(req, res){
+  res.sendfile(path.join(__dirname + '/first_view2.html'));
+})
+
