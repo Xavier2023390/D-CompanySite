@@ -18,3 +18,7 @@ app.get('/yum', function (req, res) {
 app.get('/secret', function(req, res) {
   res.send('you found the secret market gasp emoji');
 })
+
+app.get('/Baalismommy', function(req, res){
+    res.sendfile(path.join(__dirname + `/first_view.html`));
+});
