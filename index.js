@@ -3,16 +3,14 @@ const app = express()
 const port = 3000
 const path = require('path')
 
-app.get('/', (req, res) => { //checks to see if what endpoint the user used, if nothing then say hello world
-    res.send('hello world')
-});
+app.use(express.static(__dirname + '/public'));
 
 app.listen(port, () => {
     console.log(`ChatApp Listening at http://localhost:${port}`); // Server-side response in the console telling that the server is online
 })
 
 app.get('/yum', function (req, res) {
-    res.sendFile(path.join(__dirname + '/mukbang.html')); //what the end user sees
+    res.sendFile(path.join(__dirname + '/public/pages/misc/mukbang.html')); //what the end user sees
 })
 
 app.get('/secret', function(req, res) {
@@ -20,10 +18,9 @@ app.get('/secret', function(req, res) {
 })
 
 app.get('/Baalismommy', function(req, res){
-    res.sendfile(path.join(__dirname + `/first_view.html`));
+    res.sendFile(path.join(__dirname + `/public/pages/misc/first_view.html`));
 });
 
 app.get('/bunger', function(req, res){
-  res.sendfile(path.join(__dirname + '/first_view2.html'));
+  res.sendFile(path.join(__dirname + '/public/misc/first_view2.html'));
 })
-
