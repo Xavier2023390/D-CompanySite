@@ -1,9 +1,11 @@
 body {
-    background-color: powderblue;
+    background-color: rgb(94, 204, 158);
   }
   h1 {
-    color: blue;
+    color: rgb(0, 183, 255);
   }
   p {
-    color: red;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(19, 197, 64);
+    
   }
