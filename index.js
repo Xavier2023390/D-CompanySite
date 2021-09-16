@@ -9,6 +9,10 @@ app.listen(port, () => {
     console.log(`ChatApp Listening at http://localhost:${port}`); // Server-side response in the console telling that the server is online
 })
 
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/pages/home.html')); //what the end user sees
+})
+
 app.get('/yum', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/pages/misc/mukbang.html')); //what the end user sees
 })
