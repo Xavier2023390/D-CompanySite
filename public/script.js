@@ -21,7 +21,22 @@ function newQuote(){
      document.getElementById('joke').innerHTML = jokes[randomNumber];
    };
    let jokes = [
-        `123`,
-        `1234`,
-        `12345`
+        `Dear Math, grow up and solve your own problems.`,
+        `How does the moon cut his hair?" "Eclipse it.`,
+        `What did the zero say to the eight?" "That belt looks good on you.`,
+        `Where do fruits go on vacation?" "Pear-is!`,
+        `What's the best thing about Switzerland?" "I don't know, but the flag is a big plus.`,
+        `Why did Billy get fired from the banana factory? He kept throwing away the bent ones.`,
+        `Did you hear the rumor about butter? Well, I'm not going to spread it!`,
+        `I don't trust stairs. They're always up to something."`,
+        `How do you get a squirrel to like you? Act like a nut`,
+        `Where do boats go when they're sick?" "To the boat doc.`,
+        `My wife is really mad at the fact that I have no sense of direction. So I packed up my stuff and right!`,
+        `milk`,
+        `What do you call a poor Santa Claus?" "St. Nickel-less.`,
+        `Dad, did you get a haircut?" "No, I got them all cut!`,
+        `I only know 25 letters of the alphabet. I don't know y`,
+        `What did the janitor say when he jumped out of the closet?" "Supplies!`,
+        `What did one wall say to the other?" "I'll meet you at the corner.`,
+
    ];
