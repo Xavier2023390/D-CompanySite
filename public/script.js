@@ -15,3 +15,13 @@ function newQuote(){
        `By playing games you can artificially speed up your learning curve to develop the right kind of thought processes.`,
        `In order to fully realize how bad a popular play can be, it is necessary to see it twice.`
   ];
+
+  function newJoke(){
+     var randomNumber = Math.floor(Math.random() * jokes.length);
+     document.getElementById('joke').innerHTML = jokes[randomNumber];
+   };
+   let jokes = [
+        `123`,
+        `1234`,
+        `12345`
+   ];
