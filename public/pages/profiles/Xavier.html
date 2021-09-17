@@ -87,6 +87,37 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p>I want to fully learn and comprehend website development to start working on my own website and do work for others.</p><br>
         </div>
       </div>
+      <head>
+  <meta charset="utf-8">
+  <title>Random Hex Code Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="flex-row-outer">
+    <div class="flex-row">
+      <span id="hexCode">#000000</span>
+      <button class="colorBtn" onClick="GenerateCode()">Generate Hex</button>
+    </div>
+  </div>
+  <script type="text/javascript">
+    let body = document.querySelector("body");
+    let hexCode = document.querySelector("#hexCode");
+    body.style.backgroundColor = hexCode.innerText;
+
+    function GenerateCode() {
+      let RandomColor = "";
+      let Char = "0123456789abcdefghijklmnopqrstuvwxyz";
+
+      for(i = 0; i < 6; i++) {
+        RandomColor = RandomColor + Char[Math.floor(Math.random() * 16)];
+      }
+      hexCode.innerText = "#" + RandomColor;
+      body.style.backgroundColor = "#" + RandomColor;
+    }
+  </script>
+</body>
 
     <!-- End Right Column -->
     </div>
