@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+\<head
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +10,28 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
+<script>
+   //function that display value
+   function dis(val)
+   {
+       document.getElementById("result").value+=val
+   }
+
+   //function that evaluates the digit and return result
+   function solve()
+   {
+       let x = document.getElementById("result").value
+       let y = eval(x)
+       document.getElementById("result").value = y
+   }
+
+   //function that clear the display
+   function clr()
+   {
+       document.getElementById("result").value = ""
+   }
+</script>
+</head>
 <body class="w3-light-grey">
 
 <!-- Page Container -->
@@ -88,7 +111,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
       <head>
-  
+
       </head>
       <body>
       </body>
@@ -103,6 +126,40 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-teal w3-center w3-margin-bottom">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <table border="1">
+     <tr>
+        <td colspan="3"><input type="text" id="result"/></td>
+        <!-- clr() function will call clr to clear all value -->
+        <td><input type="button" value="c" onclick="clr()"/> </td>
+     </tr>
+     <tr>
+        <!-- create button and assign value to each button -->
+        <!-- dis("1") will call function dis to display value -->
+        <td><input type="button" value="1" onclick="dis('1')"/> </td>
+        <td><input type="button" value="2" onclick="dis('2')"/> </td>
+        <td><input type="button" value="3" onclick="dis('3')"/> </td>
+        <td><input type="button" value="/" onclick="dis('/')"/> </td>
+     </tr>
+     <tr>
+        <td><input type="button" value="4" onclick="dis('4')"/> </td>
+        <td><input type="button" value="5" onclick="dis('5')"/> </td>
+        <td><input type="button" value="6" onclick="dis('6')"/> </td>
+        <td><input type="button" value="-" onclick="dis('-')"/> </td>
+     </tr>
+     <tr>
+        <td><input type="button" value="7" onclick="dis('7')"/> </td>
+        <td><input type="button" value="8" onclick="dis('8')"/> </td>
+        <td><input type="button" value="9" onclick="dis('9')"/> </td>
+        <td><input type="button" value="+" onclick="dis('+')"/> </td>
+     </tr>
+     <tr>
+        <td><input type="button" value="." onclick="dis('.')"/> </td>
+        <td><input type="button" value="0" onclick="dis('0')"/> </td>
+        <!-- solve function call function solve to evaluate value -->
+        <td><input type="button" value="=" onclick="solve()"/> </td>
+        <td><input type="button" value="*" onclick="dis('*')"/> </td>
+     </tr>
+  </table>
 </footer>
 
 </body>
