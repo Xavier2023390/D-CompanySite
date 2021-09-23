@@ -24,4 +24,4 @@ app.get('/about', (req,res)=> {
 })
 
 //Listen on port 5000
-app.listen(port, () => console.info('App listening on port ${port}'))
+app.listen(port, () => console.info(`App listening on port ${port}`))
