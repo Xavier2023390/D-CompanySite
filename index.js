@@ -1,30 +1,27 @@
+//Imports
 const express = require('express')
+
 const app = express()
-const port = 3000
-const path = require('path')
+const port = 5000
 
-app.use(express.static(__dirname + '/public'));
+// static files
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/js', express.static(__dirname + 'public/js'))
+app.use('/img', express.static(__dirname + 'public/img'))
 
-app.listen(port, () => {
-    console.log(`ChatApp Listening at http://localhost:${port}`); // Server-side response in the console telling that the server is online
+// set template
+app.use(expressLayouts)
+app.set('view  engine', 'ejs')
+
+// Navigation
+app.get('', (req,res)=> {
+  res.render('index')
 })
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/public/pages/home.html')); //what the end user sees
+app.get('/about', (req,res)=> {
+  res.render('about')
 })
 
-app.get('/yum', function (req, res) {
-    res.sendFile(path.join(__dirname + '/public/pages/misc/mukbang.html')); //what the end user sees
-})
-
-app.get('/secret', function(req, res) {
-  res.send('you found the secret market gasp emoji');
-})
-
-app.get('/Baalismommy', function(req, res){
-    res.sendFile(path.join(__dirname + `/public/pages/misc/first_view.html`));
-});
-
-app.get('/bunger', function(req, res){
-  res.sendFile(path.join(__dirname + '/public/misc/first_view2.html'));
-})
+//Listen on port 5000
+app.listen(port, () => console.info(`App listening on port ${port}`))
