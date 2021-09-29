@@ -10,7 +10,7 @@ const port = 3000;
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 //setup public folder
-app.use(express.static('./views'));
+app.use(express.static('./public'));
 app.get('/',function (req, res) {
 res.render('pages/home')
 });
@@ -21,37 +21,32 @@ app.get('/seth',function (req, res) {
 res.render('pages/profile', {
   name: "Seth Martin",
   position: "Senior Programming Student",
-<<<<<<< Updated upstream
-  header1: `Header here`,
-  para1: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
-=======
   header1: `Server Hosting / Company Design`,
   profile: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
->>>>>>> Stashed changes
 })
 });
 app.get('/xavier',function (req, res) {
 res.render('pages/profile', {
   name: "Xavier matheson",
-  position: "Senior Programming Student",
-  header1: `Header here`,
-  para1: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
+  position: "Junior Programming Student",
+  header1: `Beginner programmer`,
+  profile: `<p>I want ot be able to use my skills I learned in programming in a jobs</p>`
 })
 });
 app.get('/jacob',function (req, res) {
 res.render('pages/profile', {
   name: "Jacob Smith",
-  position: "Senior Programming Student",
-  header1: `Header here`,
-  para1: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
+  position: "Junior Programming Student",
+  header1: `Programmer`,
+  profile: `<p>I would like to be able to program video games and other projects so I have them to show to employers</p>`
 })
 });
 app.get('/saimye',function (req, res) {
-res.render('pages/saimye.ejs', {
+res.render('pages/profile', {
   name: "saimye",
   position: "Senior Programming Student",
   header1: `Header here`,
-  para1: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
+  profile: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
 })
 });
 app.listen(port, () => console.log(`MasterEJS app Started on port ${port}!`));
