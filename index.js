@@ -21,8 +21,13 @@ app.get('/seth',function (req, res) {
 res.render('pages/profile', {
   name: "Seth Martin",
   position: "Senior Programming Student",
+<<<<<<< Updated upstream
   header1: `Header here`,
   para1: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
+=======
+  header1: `Server Hosting / Company Design`,
+  profile: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
+>>>>>>> Stashed changes
 })
 });
 app.get('/xavier',function (req, res) {
