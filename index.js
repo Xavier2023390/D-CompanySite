@@ -21,7 +21,7 @@ app.get('/seth',function (req, res) {
 res.render('pages/profile', {
   name: "Seth Martin",
   position: "Senior Programming Student",
-  header1: `Header here`,
+  header1: `Server Hosting / Company Design`,
   profile: `<p>I want to own my own server hosting company, to let people rent out Virtual Private Servers</p>`
 })
 });
