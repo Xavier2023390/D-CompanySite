@@ -14,6 +14,8 @@ app.use(express.static('./public'));
 
 var rawdata = fs.readFileSync('profiles.json');
 var profiles = JSON.parse(rawdata);
+rawdata = fs.readFileSync('comments.json');
+var commentFile = JSON.parse(rawdata);
 
 app.get('/',function (req, res) {
 res.render('pages/home')
@@ -32,5 +34,21 @@ res.render('pages/profile', profiles.jacob)
 });
 app.get('/saimye',function (req, res) {
 res.render('pages/profile', profiles.saimye)
+});
+app.get('/feedback',function (req, res) {
+  let object = {
+    name: req.query.name,
+    adjective: req.query.adjective
+  }
+  //check to make sure both varaiables have a value
+  if (object.name && object.adjective) {
+    object = JSON.stringify(object)
+    fs.writeFile('comments.json', object, 'utf8', function(){
+      res.send("Wrote to file")
+    })
+  } else {
+    res.send('You forgot your parameters')
+  }
+  //write file
 });
 app.listen(port, () => console.log(`MasterEJS app Started on port ${port}!`));
