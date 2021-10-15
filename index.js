@@ -36,9 +36,12 @@ app.get('/saimye',function (req, res) {
 res.render('pages/profile', profiles.saimye)
 });
 app.get('/feedback',function (req, res) {
+  res.render('pages/feedback.ejs')
+});
+app.post('/feedback',function (req, res) {
   let object = {
-    name: req.query.name,
-    adjective: req.query.adjective
+    name: req.body.name,
+    adjective: req.body.adjective
   }
   //check to make sure both varaiables have a value
   if (object.name && object.adjective) {
