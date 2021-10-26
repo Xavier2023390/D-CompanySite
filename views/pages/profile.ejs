@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <link rel="stylesheet" href="profiles.css">
+  <div class="header">
+    <a href="/">Home</a>
+  </div>
 </head>
 <body>
-<div class="container-fluid bg-3 text-center">
+<div class="all">
+  <div class="name">
   <h3><%= name %></h3><br>
+  </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="pos">
       <p><%= position %></p>
 
     </div>
-    <div class="col-sm-4">
+    <div class="header1">
       <p><%= header1 %></p>
     </div>
-    <div class="col-sm-4">
-      <% for (var i = 0; i < comments.length; i++) { %>
+    <div class="desc">
+      <p><%= profile %></p>
     </div>
-  </div>
 </div>
 
 </body>
