@@ -15,8 +15,6 @@ app.use(express.urlencoded({extended: true}));
 
 var rawdata = fs.readFileSync('profiles.json');
 var profiles = JSON.parse(rawdata);
-
-
 app.get('/',function (req, res) {
 res.render('pages/home')
 });

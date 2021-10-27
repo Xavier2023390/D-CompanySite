@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+    <h1>Team D Chatroom</h1>
+    <form action="/chat" method="post">
+        <input type="text" name="message" placeholder="Type something here.." value="">
+        <input type="submit" value="submit">
+    </form>
+    <div id="messages"></div>
+    <table>
+        <% for(var i=0; i < msg.length; i++) { %>
+           <tr>
+             <td><%= msg[i]%></td>
+           </tr>
+        <% } %>
+        </table>
+</body>
+</html>
