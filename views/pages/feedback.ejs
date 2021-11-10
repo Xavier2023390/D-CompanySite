@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Feedback</h1>
+    <form action="/feedback" method="post">
+        <input type="text" name="name" placeholder="Enter your name..." value="">
+        <input type="text" name="adjective" placeholder="Describe yourself..." value="">
+        <input type="submit" value="submit">
+    </form>
+    <div id="comments"></div>
+    <table>
+        <% for(var i=0; i < comments.length; i++) { %>
+           <tr>
+             <td><%= comments[i].name %></td>
+             <td><%= comments[i].adjective %></td>
+           </tr>
+        <% } %>
+        </table>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+  background: #0c5a63;
+  background: -moz-linear-gradient(left, #000000 0%, #443636 100%, #000000 100%);
+  background: -webkit-linear-gradient(left, #000000 0%, #443636 100%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #443636 100%, #000000 100%);
+  margin: auto;
+  }
+.header {
+  background-color: #009688;
+  text-align: center;
+  padding: 1.07%;
+  border-top-left-radius: 13%;
+  border-top-right-radius: 13%;
+  width: 37.9%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #ffffff;
+  margin: auto;
+}
+
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(206, 200, 200);
+  width:40%;
+  text-align: center;
+  margin: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  filter: drop-shadow(5px 5px 10px #000);
+}
+
+/* Navbar links */
+.topnav a {
+  float: center;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin:auto;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.information {
+  margin:auto;
+  width: 30px;
+}
